@@ -1,0 +1,573 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://projectos.dev/schemas/bootstrap-output.schema.json",
+  "title": "Bootstrap Output",
+  "description": "Agent-emitted shape for the bootstrap playbook. Consumed by createBootstrapApplier.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project",
+    "stack",
+    "brief_md",
+    "plan_md",
+    "architecture_md",
+    "system_md",
+    "roadmap",
+    "epics",
+    "tasks",
+    "library_categories"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "project": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "tagline": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 200
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 2000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "phase": {
+          "type": "string",
+          "enum": [
+            "Idea",
+            "Discovery",
+            "Planning",
+            "Repo Setup",
+            "Building",
+            "Iterating",
+            "Archived"
+          ]
+        },
+        "workspace": {
+          "type": "string"
+        },
+        "members": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string",
+                "enum": [
+                  "Owner",
+                  "Editor",
+                  "Viewer"
+                ]
+              },
+              "joined_at": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "role",
+              "joined_at"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "repo": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "links": {
+          "type": "object",
+          "additionalProperties": {}
+        },
+        "sync_settings": {
+          "type": "object",
+          "properties": {
+            "open_prs_for_breaking_changes": {
+              "type": "boolean"
+            },
+            "auto_commit_doc_edits": {
+              "type": "boolean"
+            },
+            "mirror_tasks_to_issues": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "name",
+        "slug",
+        "phase",
+        "members"
+      ],
+      "additionalProperties": false
+    },
+    "stack": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "deploy_target": {
+          "type": "string",
+          "enum": [
+            "replit",
+            "vercel",
+            "render",
+            "fly",
+            "cloudflare",
+            "none"
+          ]
+        },
+        "framework": {
+          "type": "string"
+        },
+        "framework_version": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "language_strict": {
+          "type": "boolean"
+        },
+        "database": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "auth": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "auth_methods": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "validation": {
+          "type": "string"
+        },
+        "validation_to_json_schema": {
+          "type": "boolean"
+        },
+        "agent_provider": {
+          "type": "string"
+        },
+        "agent_default_model": {
+          "type": "string"
+        },
+        "agent_byok": {
+          "type": "boolean"
+        },
+        "git_provider": {
+          "type": "string"
+        },
+        "git_sync_method": {
+          "type": "string"
+        },
+        "realtime_transport": {
+          "type": "string"
+        },
+        "env_vars": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "root_scaffolding": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "deploy_target",
+        "framework",
+        "language"
+      ],
+      "additionalProperties": false
+    },
+    "brief_md": {
+      "type": "string",
+      "minLength": 1
+    },
+    "plan_md": {
+      "type": "string",
+      "minLength": 1
+    },
+    "architecture_md": {
+      "type": "string",
+      "minLength": 1
+    },
+    "system_md": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prd_md": {
+      "type": "string",
+      "minLength": 1
+    },
+    "roadmap": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "milestones": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^M\\d+$"
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "target_date": {
+                "type": "string",
+                "format": "date"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "not-started",
+                  "in-progress",
+                  "completed"
+                ]
+              },
+              "progress": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "epic_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "status",
+              "progress",
+              "epic_ids"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "milestones"
+      ],
+      "additionalProperties": false
+    },
+    "epics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "pattern": "^\\d+\\.\\d+\\.\\d+$"
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^E-\\d{3,}$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "milestone_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "not-started",
+              "in-progress",
+              "completed",
+              "archived"
+            ]
+          },
+          "lead": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "schema_version",
+          "id",
+          "name",
+          "status"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "pattern": "^\\d+\\.\\d+\\.\\d+$"
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^T-\\d{3,}(\\.\\d+)?$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "epic_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "draft",
+              "planned",
+              "todo",
+              "doing",
+              "awaiting-review",
+              "review",
+              "done",
+              "blocked"
+            ]
+          },
+          "estimate": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "XS",
+                  "S",
+                  "M",
+                  "L",
+                  "XL"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "assignee": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "acceptance_criteria": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string"
+                },
+                "done": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "text",
+                "done"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "depends_on": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "hard",
+                    "soft"
+                  ]
+                },
+                "reason": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "type"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "blocks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "plan": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "steps": {
+                    "type": "array",
+                    "items": {}
+                  },
+                  "files_to_touch": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "acceptance_addenda": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "risks": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "estimated_effort": {
+                    "type": "string",
+                    "enum": [
+                      "XS",
+                      "S",
+                      "M",
+                      "L",
+                      "XL"
+                    ]
+                  },
+                  "approved": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "steps",
+                  "estimated_effort"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "chat_path": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "github_issue_number": {
+            "type": "integer",
+            "exclusiveMinimum": 0
+          }
+        },
+        "required": [
+          "schema_version",
+          "id",
+          "title",
+          "tags",
+          "status"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "library_categories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "880f1ce9-3198-4f3a-a8c6-2020d96faaec",
+  "started_at": "2026-05-21T01:36:03.254Z",
+  "completed_at": "2026-05-21T01:36:11.867Z",
+  "completed_by": "user_3DqPzch3whZfWLrVNlDBo0lwk9J",
+  "answers": {
+    "name": "rest-express",
+    "framework": "React",
+    "project_type": "web-app"
+  },
+  "trace": [
+    {
+      "ts": "2026-05-21T01:36:11.867Z",
+      "question_id": "name",
+      "answer": "rest-express",
+      "source": "import",
+      "confidence": 0.95
+    },
+    {
+      "ts": "2026-05-21T01:36:11.867Z",
+      "question_id": "framework",
+      "answer": "React",
+      "source": "import",
+      "confidence": 0.95
+    },
+    {
+      "ts": "2026-05-21T01:36:11.867Z",
+      "question_id": "project_type",
+      "answer": "web-app",
+      "source": "import",
+      "confidence": 0.6
+    }
+  ],
+  "existing_code": true
+}
