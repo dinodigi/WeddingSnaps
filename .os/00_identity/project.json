@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "id": "7e02d0fb-8c2b-4803-a626-e540eb64d64f",
+  "name": "rest-express",
+  "slug": "rest-express",
+  "tagline": "React web app managed with the .os/ workflow",
+  "description": "A React web application being adopted into the .os/ project management workflow. Detected from an existing codebase import.",
+  "phase": "Building",
+  "workspace": "default",
+  "members": [],
+  "created_at": "2026-05-21T01:39:15.298Z",
+  "repo": null,
+  "links": {},
+  "sync_settings": {
+    "open_prs_for_breaking_changes": false,
+    "auto_commit_doc_edits": false,
+    "mirror_tasks_to_issues": false
+  }
+}

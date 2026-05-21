@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "epics": [
+    {
+      "id": "E-001",
+      "name": ".os/ Adoption & Documentation",
+      "milestone_id": "M1",
+      "status": "in-progress",
+      "task_count": 5,
+      "done_count": 0,
+      "progress": 0,
+      "lead": null
+    },
+    {
+      "id": "E-002",
+      "name": "Codebase Triage & Tech Debt",
+      "milestone_id": "M2",
+      "status": "not-started",
+      "task_count": 2,
+      "done_count": 0,
+      "progress": 0,
+      "lead": null
+    },
+    {
+      "id": "E-003",
+      "name": "Feature Development",
+      "milestone_id": "M3",
+      "status": "not-started",
+      "task_count": 0,
+      "done_count": 0,
+      "progress": 0,
+      "lead": null
+    },
+    {
+      "id": "E-004",
+      "name": "Quality & Observability",
+      "milestone_id": "M4",
+      "status": "not-started",
+      "task_count": 3,
+      "done_count": 0,
+      "progress": 0,
+      "lead": null
+    }
+  ],
+  "next_id": "E-005"
+}

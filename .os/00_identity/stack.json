@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "deploy_target": "none",
+  "framework": "React",
+  "framework_version": "18.x",
+  "language": "TypeScript",
+  "language_strict": false,
+  "database": null,
+  "auth": null,
+  "auth_methods": [],
+  "validation": "zod",
+  "validation_to_json_schema": false,
+  "agent_provider": "openai",
+  "agent_default_model": "gpt-4o",
+  "agent_byok": false,
+  "git_provider": "github",
+  "git_sync_method": "manual",
+  "realtime_transport": "none",
+  "env_vars": [],
+  "root_scaffolding": []
+}

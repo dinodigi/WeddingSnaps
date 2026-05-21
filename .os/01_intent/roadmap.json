@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "milestones": [
+    {
+      "id": "M1",
+      "name": ".os/ Adoption Foundation",
+      "target_date": "2026-06-04",
+      "status": "in-progress",
+      "progress": 0.2,
+      "epic_ids": [
+        "E-001"
+      ]
+    },
+    {
+      "id": "M2",
+      "name": "Codebase Triage & Debt Mapping",
+      "target_date": "2026-06-18",
+      "status": "not-started",
+      "progress": 0,
+      "epic_ids": [
+        "E-002"
+      ]
+    },
+    {
+      "id": "M3",
+      "name": "Active Feature Development",
+      "target_date": "2026-07-09",
+      "status": "not-started",
+      "progress": 0,
+      "epic_ids": [
+        "E-003"
+      ]
+    },
+    {
+      "id": "M4",
+      "name": "Quality & Observability",
+      "target_date": "2026-07-23",
+      "status": "not-started",
+      "progress": 0,
+      "epic_ids": [
+        "E-004"
+      ]
+    },
+    {
+      "id": "M5",
+      "name": "v1 Declared",
+      "target_date": "2026-08-06",
+      "status": "not-started",
+      "progress": 0,
+      "epic_ids": [
+        "E-001",
+        "E-002",
+        "E-003",
+        "E-004"
+      ]
+    }
+  ]
+}

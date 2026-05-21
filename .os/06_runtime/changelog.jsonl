@@ -1,0 +1,12 @@
+{"ts":"2026-05-21T01:39:15.298Z","type":"task.created","summary":"Task created: T-001 — Document the existing architecture","by":"agent"}
+{"ts":"2026-05-21T01:39:15.298Z","type":"task.created","summary":"Task created: T-002 — Confirm and complete stack.json","by":"agent"}
+{"ts":"2026-05-21T01:39:15.298Z","type":"task.created","summary":"Task created: T-003 — Define the v1 milestone scope","by":"agent"}
+{"ts":"2026-05-21T01:39:15.298Z","type":"task.created","summary":"Task created: T-004 — Adopt the propose-change workflow","by":"agent"}
+{"ts":"2026-05-21T01:39:15.298Z","type":"task.created","summary":"Task created: T-005 — Tune agent system prompt to real codebase conventions","by":"agent"}
+{"ts":"2026-05-21T01:39:15.298Z","type":"task.created","summary":"Task created: T-006 — Audit existing components and routes","by":"agent"}
+{"ts":"2026-05-21T01:39:15.298Z","type":"task.created","summary":"Task created: T-007 — Create tasks for identified tech debt","by":"agent"}
+{"ts":"2026-05-21T01:39:15.298Z","type":"task.created","summary":"Task created: T-008 — Enforce linting and formatting","by":"agent"}
+{"ts":"2026-05-21T01:39:15.298Z","type":"task.created","summary":"Task created: T-009 — Add error boundaries to key UI surfaces","by":"agent"}
+{"ts":"2026-05-21T01:39:15.298Z","type":"task.created","summary":"Task created: T-010 — Write baseline component tests","by":"agent"}
+{"ts":"2026-05-21T01:39:32.078Z","type":"project.bootstrapped","summary":"Project bootstrapped: 9 files, 10 tasks, 4 epics","by":"user_3DqPzch3whZfWLrVNlDBo0lwk9J"}
+{"ts":"2026-05-21T01:39:33.248Z","type":"workflow.completed","summary":"Workflow complete: bootstrap","by":"agent"}

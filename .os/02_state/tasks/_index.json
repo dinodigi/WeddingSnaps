@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0.0",
+  "columns": {
+    "backlog": [],
+    "todo": [
+      "T-001",
+      "T-002",
+      "T-003",
+      "T-004",
+      "T-005",
+      "T-006",
+      "T-007",
+      "T-008",
+      "T-009",
+      "T-010"
+    ],
+    "doing": [],
+    "review": [],
+    "done": [],
+    "blocked": []
+  },
+  "tasks": [
+    {
+      "id": "T-001",
+      "title": "Document the existing architecture",
+      "status": "todo",
+      "tags": [
+        "documentation",
+        "architecture"
+      ],
+      "epic_id": "E-001",
+      "estimate": "M",
+      "blocked": false,
+      "has_plan": false
+    },
+    {
+      "id": "T-002",
+      "title": "Confirm and complete stack.json",
+      "status": "todo",
+      "tags": [
+        "setup",
+        "documentation"
+      ],
+      "epic_id": "E-001",
+      "estimate": "S",
+      "blocked": false,
+      "has_plan": false
+    },
+    {
+      "id": "T-003",
+      "title": "Define the v1 milestone scope",
+      "status": "todo",
+      "tags": [
+        "planning"
+      ],
+      "epic_id": "E-001",
+      "estimate": "S",
+      "blocked": false,
+      "has_plan": false
+    },
+    {
+      "id": "T-004",
+      "title": "Adopt the propose-change workflow",
+      "status": "todo",
+      "tags": [
+        "workflow",
+        "process"
+      ],
+      "epic_id": "E-001",
+      "estimate": "S",
+      "blocked": false,
+      "has_plan": false
+    },
+    {
+      "id": "T-005",
+      "title": "Tune agent system prompt to real codebase conventions",
+      "status": "todo",
+      "tags": [
+        "agent",
+        "documentation"
+      ],
+      "epic_id": "E-001",
+      "estimate": "S",
+      "blocked": true,
+      "has_plan": false
+    },
+    {
+      "id": "T-006",
+      "title": "Audit existing components and routes",
+      "status": "todo",
+      "tags": [
+        "audit",
+        "tech-debt"
+      ],
+      "epic_id": "E-002",
+      "estimate": "L",
+      "blocked": true,
+      "has_plan": false
+    },
+    {
+      "id": "T-007",
+      "title": "Create tasks for identified tech debt",
+      "status": "todo",
+      "tags": [
+        "tech-debt",
+        "planning"
+      ],
+      "epic_id": "E-002",
+      "estimate": "M",
+      "blocked": true,
+      "has_plan": false
+    },
+    {
+      "id": "T-008",
+      "title": "Enforce linting and formatting",
+      "status": "todo",
+      "tags": [
+        "quality",
+        "dx"
+      ],
+      "epic_id": "E-004",
+      "estimate": "S",
+      "blocked": false,
+      "has_plan": false
+    },
+    {
+      "id": "T-009",
+      "title": "Add error boundaries to key UI surfaces",
+      "status": "todo",
+      "tags": [
+        "quality",
+        "resilience"
+      ],
+      "epic_id": "E-004",
+      "estimate": "S",
+      "blocked": false,
+      "has_plan": false
+    },
+    {
+      "id": "T-010",
+      "title": "Write baseline component tests",
+      "status": "todo",
+      "tags": [
+        "quality",
+        "testing"
+      ],
+      "epic_id": "E-004",
+      "estimate": "L",
+      "blocked": true,
+      "has_plan": false
+    }
+  ],
+  "next_id": "T-011"
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "id": "E-003",
+  "name": "Feature Development",
+  "milestone_id": "M3",
+  "description": "Plan and deliver the next meaningful product feature using the .os/ workflow end-to-end.",
+  "status": "not-started",
+  "lead": null,
+  "created_at": "2026-05-21T01:39:15.298Z",
+  "updated_at": "2026-05-21T01:39:15.298Z"
+}

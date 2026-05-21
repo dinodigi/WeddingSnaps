@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "id": "T-010",
+  "title": "Write baseline component tests",
+  "tags": [
+    "quality",
+    "testing"
+  ],
+  "epic_id": "E-004",
+  "status": "todo",
+  "estimate": "L",
+  "assignee": null,
+  "description": "Using the project's existing test runner, write tests for the 3–5 most critical React components identified in T-006. Focus on render, user interaction, and edge cases.",
+  "acceptance_criteria": [
+    {
+      "text": "At least 3 critical components have test files",
+      "done": false
+    },
+    {
+      "text": "`npm test` passes with the new tests",
+      "done": false
+    },
+    {
+      "text": "Tests cover at least one user interaction per component",
+      "done": false
+    }
+  ],
+  "depends_on": [
+    {
+      "id": "T-006",
+      "type": "hard"
+    }
+  ],
+  "blocks": [],
+  "chat_path": ".os/02_state/tasks/T-010/chat.jsonl",
+  "created_at": "2026-05-21T01:39:15.298Z",
+  "updated_at": "2026-05-21T01:39:15.298Z"
+}

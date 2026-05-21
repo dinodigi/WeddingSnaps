@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "id": "T-003",
+  "title": "Define the v1 milestone scope",
+  "tags": [
+    "planning"
+  ],
+  "epic_id": "E-001",
+  "status": "todo",
+  "estimate": "S",
+  "assignee": null,
+  "description": "With the team, review the current feature set and agree on what constitutes 'v1 done'. Update plan.md M3–M5 scope to reflect real product goals rather than the generic defaults.",
+  "acceptance_criteria": [
+    {
+      "text": "plan.md milestones M3–M5 contain product-specific goals",
+      "done": false
+    },
+    {
+      "text": "prd.md feature set reflects agreed v1 scope",
+      "done": false
+    },
+    {
+      "text": "At least one epic exists per major feature area",
+      "done": false
+    }
+  ],
+  "depends_on": [
+    {
+      "id": "T-001",
+      "type": "soft"
+    }
+  ],
+  "blocks": [
+    "T-004"
+  ],
+  "chat_path": ".os/02_state/tasks/T-003/chat.jsonl",
+  "created_at": "2026-05-21T01:39:15.298Z",
+  "updated_at": "2026-05-21T01:39:15.298Z"
+}

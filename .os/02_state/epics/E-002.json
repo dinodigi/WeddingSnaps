@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "id": "E-002",
+  "name": "Codebase Triage & Tech Debt",
+  "milestone_id": "M2",
+  "description": "Audit the existing codebase for undocumented behaviour, missing tests, and known debt. Capture everything as tracked tasks.",
+  "status": "not-started",
+  "lead": null,
+  "created_at": "2026-05-21T01:39:15.298Z",
+  "updated_at": "2026-05-21T01:39:15.298Z"
+}

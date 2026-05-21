@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "id": "T-002",
+  "title": "Confirm and complete stack.json",
+  "tags": [
+    "setup",
+    "documentation"
+  ],
+  "epic_id": "E-001",
+  "status": "todo",
+  "estimate": "S",
+  "assignee": null,
+  "description": "Review package.json, tsconfig.json, and the build config to confirm the real framework version, language strictness, deploy target, database, and auth mechanism. Update stack.json to match.",
+  "acceptance_criteria": [
+    {
+      "text": "stack.json deploy_target is set to a real value (not 'none' unless confirmed)",
+      "done": false
+    },
+    {
+      "text": "Language and TypeScript strict mode reflect tsconfig.json",
+      "done": false
+    },
+    {
+      "text": "Any database or auth libraries are recorded",
+      "done": false
+    }
+  ],
+  "depends_on": [
+    {
+      "id": "T-001",
+      "type": "soft"
+    }
+  ],
+  "blocks": [],
+  "chat_path": ".os/02_state/tasks/T-002/chat.jsonl",
+  "created_at": "2026-05-21T01:39:15.298Z",
+  "updated_at": "2026-05-21T01:39:15.298Z"
+}

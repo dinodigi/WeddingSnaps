@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "id": "T-007",
+  "title": "Create tasks for identified tech debt",
+  "tags": [
+    "tech-debt",
+    "planning"
+  ],
+  "epic_id": "E-002",
+  "status": "todo",
+  "estimate": "M",
+  "assignee": null,
+  "description": "For each debt item found in T-006, create a corresponding .os/ task with a clear description, acceptance criteria, and estimate. Tag all with 'tech-debt'.",
+  "acceptance_criteria": [
+    {
+      "text": "Every identified debt item has a corresponding task",
+      "done": false
+    },
+    {
+      "text": "All debt tasks are tagged 'tech-debt'",
+      "done": false
+    },
+    {
+      "text": "Debt tasks are assigned to appropriate epics",
+      "done": false
+    }
+  ],
+  "depends_on": [
+    {
+      "id": "T-006",
+      "type": "hard"
+    }
+  ],
+  "blocks": [],
+  "chat_path": ".os/02_state/tasks/T-007/chat.jsonl",
+  "created_at": "2026-05-21T01:39:15.298Z",
+  "updated_at": "2026-05-21T01:39:15.298Z"
+}

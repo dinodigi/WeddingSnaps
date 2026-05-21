@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "id": "T-009",
+  "title": "Add error boundaries to key UI surfaces",
+  "tags": [
+    "quality",
+    "resilience"
+  ],
+  "epic_id": "E-004",
+  "status": "todo",
+  "estimate": "S",
+  "assignee": null,
+  "description": "Identify the top-level and any critical sub-tree React components. Wrap them with error boundaries that gracefully degrade and optionally report errors.",
+  "acceptance_criteria": [
+    {
+      "text": "App root is wrapped in an ErrorBoundary",
+      "done": false
+    },
+    {
+      "text": "At least one critical sub-tree has its own ErrorBoundary",
+      "done": false
+    },
+    {
+      "text": "Error state renders a user-friendly fallback UI",
+      "done": false
+    }
+  ],
+  "depends_on": [
+    {
+      "id": "T-006",
+      "type": "soft"
+    }
+  ],
+  "blocks": [],
+  "chat_path": ".os/02_state/tasks/T-009/chat.jsonl",
+  "created_at": "2026-05-21T01:39:15.298Z",
+  "updated_at": "2026-05-21T01:39:15.298Z"
+}

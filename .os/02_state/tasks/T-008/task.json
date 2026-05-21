@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "id": "T-008",
+  "title": "Enforce linting and formatting",
+  "tags": [
+    "quality",
+    "dx"
+  ],
+  "epic_id": "E-004",
+  "status": "todo",
+  "estimate": "S",
+  "assignee": null,
+  "description": "Confirm ESLint and Prettier (or equivalent) are configured and passing. Fix any existing lint errors. Wire up a pre-commit hook (Husky / lint-staged) if not already present.",
+  "acceptance_criteria": [
+    {
+      "text": "`npm run lint` exits 0",
+      "done": false
+    },
+    {
+      "text": "Pre-commit hook prevents committing lint errors",
+      "done": false
+    },
+    {
+      "text": "Formatting rules are documented in architecture.md or a CONTRIBUTING file",
+      "done": false
+    }
+  ],
+  "depends_on": [
+    {
+      "id": "T-002",
+      "type": "soft"
+    }
+  ],
+  "blocks": [],
+  "chat_path": ".os/02_state/tasks/T-008/chat.jsonl",
+  "created_at": "2026-05-21T01:39:15.298Z",
+  "updated_at": "2026-05-21T01:39:15.298Z"
+}

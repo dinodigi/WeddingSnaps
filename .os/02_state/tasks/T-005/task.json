@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "id": "T-005",
+  "title": "Tune agent system prompt to real codebase conventions",
+  "tags": [
+    "agent",
+    "documentation"
+  ],
+  "epic_id": "E-001",
+  "status": "todo",
+  "estimate": "S",
+  "assignee": null,
+  "description": "After T-001 is done, update 05_agent/system.md with confirmed code style, naming conventions, test runner, CSS approach, and import alias patterns from the actual project.",
+  "acceptance_criteria": [
+    {
+      "text": "system.md 'Code style' section reflects real conventions",
+      "done": false
+    },
+    {
+      "text": "system.md references the confirmed test runner",
+      "done": false
+    },
+    {
+      "text": "system.md references the confirmed CSS approach",
+      "done": false
+    }
+  ],
+  "depends_on": [
+    {
+      "id": "T-001",
+      "type": "hard"
+    }
+  ],
+  "blocks": [],
+  "chat_path": ".os/02_state/tasks/T-005/chat.jsonl",
+  "created_at": "2026-05-21T01:39:15.298Z",
+  "updated_at": "2026-05-21T01:39:15.298Z"
+}
